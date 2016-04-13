@@ -1,0 +1,7 @@
+<%= simple_form_for @car do |f| %>
+  <%= f.input :name, label: t("car.name"), class: "text_field" %>
+  <%= f.input :car_number, label: t("car.car_number"), class: "text_field" %>
+  <%= f.input :car_passport, label: t("car.car_passport_number"), class: "text_field" %>
+  <%= f.input :date_of_issue_passport, label: t("car.date_of_issue_passport"), class: "text_field", as: :date, html5: true %>
+  <%= f.button :submit, t("car.save") %>
+<% end %>
