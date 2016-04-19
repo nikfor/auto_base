@@ -15,8 +15,8 @@
         <td> <%= car.name %> </td>
         <td> <%= car.car_number %> </td>
         <td> <%= car.car_passport %> </td>
-        <td> <%= car.date_of_issue_passport %> </td>
-        <td> <input type="checkbox" disabled/> </td>
+        <td> <%= car.date_of_issue_passport.strftime("%d.%m.%Y") %> </td>
+        <td> <input type="checkbox" <%= "checked" unless car.pictures.empty? %> disabled/> </td>
         <td> <%= link_to t("car.edit"), edit_car_path(car), class: "btn btn-default" %> <%= link_to t("car.delete"), car_path(car), method: :delete, class: "btn btn-default" %>  </td>
       </tr>
     <% end %>

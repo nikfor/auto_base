@@ -55,8 +55,36 @@ th:nth-child(7){
   text-align: left;
 }
 
-
 .form-car{
   margin: 50px;
   width: 500px;
+}
+
+abbr{
+  display: none;
+}
+
+input[type='file']{
+  margin-top: 5px;
+}
+
+.pictures_group{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image{
+  margin: 10px;
+}
+
+.picture_add .file-field{
+  position: relative;
+}
+
+.file-field .file-name{
+  position: absolute;
+  left: 270px;
+  top: 1px;
 }
