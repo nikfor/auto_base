@@ -1,0 +1,90 @@
+// Place all the styles related to the cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.main-page{
+  max-width: 1150px;
+  padding: 50px;
+}
+
+.table-cars{
+  max-width: 500px;
+}
+
+.table-cars th{
+  background-color: grey;
+  text-align: center;
+}
+
+.table-cars tr:last-child{
+  background-color: grey;
+}
+
+.table-cars td{
+  text-align: center;
+}
+
+th:first-child{
+  width: 20px;
+}
+
+th:nth-child(2){
+  width: 150px;
+}
+
+th:nth-child(3){
+  width: 250px;
+}
+
+th:nth-child(4){
+  width: 150px;
+}
+
+th:nth-child(5){
+  width: 150px;
+}
+
+th:nth-child(6){
+  width: 50px;
+}
+
+th:nth-child(7){
+  width: 150px;
+}
+
+.table-cars tr:last-child td{
+  text-align: left;
+}
+
+.form-car{
+  margin: 50px;
+  width: 500px;
+}
+
+abbr{
+  display: none;
+}
+
+input[type='file']{
+  margin-top: 5px;
+}
+
+.pictures_group{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.image{
+  margin: 10px;
+}
+
+.picture_add .file-field{
+  position: relative;
+}
+
+.file-field .file-name{
+  position: absolute;
+  left: 270px;
+  top: 1px;
+}

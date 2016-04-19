@@ -1,0 +1,28 @@
+<article class="main-page">
+  <table class="table table-cars">
+    <tr>
+      <th>#</th>
+      <th><%= t("car.name") %></th>
+      <th><%= t("car.car_number") %></th>
+      <th><%= t("car.car_passport_number") %></th>
+      <th><%= t("car.date_of_issue_passport") %></th>
+      <th><%= t("car.photo") %></th>
+      <th><%= link_to t("car.new"), new_car_path, class: "btn btn-primary btn-block" %></th>
+    </tr>
+    <% @cars.each do |car| %>
+      <tr>
+        <td> <%= car.id %> </td>
+        <td> <%= car.name %> </td>
+        <td> <%= car.car_number %> </td>
+        <td> <%= car.car_passport %> </td>
+        <td> <%= car.date_of_issue_passport.strftime("%d.%m.%Y") %> </td>
+        <td> <input type="checkbox" <%= "checked" unless car.pictures.empty? %> disabled/> </td>
+        <td> <%= link_to t("car.edit"), edit_car_path(car), class: "btn btn-default" %> <%= link_to t("car.delete"), car_path(car), method: :delete, class: "btn btn-default" %>  </td>
+      </tr>
+    <% end %>
+    <tr>
+      <td><%= t("car.total")%> </td>
+      <td colspan="6"><%= @cars.length %></td>
+    </tr>
+  </tabel>
+</article>

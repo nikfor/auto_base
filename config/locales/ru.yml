@@ -1,0 +1,14 @@
+ru:
+  car:
+    name: "Наименование ТС"
+    car_number: "Государственный номер"
+    car_passport_number: "Номер ПТС"
+    date_of_issue_passport: "Дата выдачи ПТС "
+    photo: "Фото"
+    add_car_data: "Добавить данные"
+    save: "Сохранить"
+    new: "Новый"
+    edit: "Редак."
+    delete: "Удал."
+    total: "Всего:"
+    back: "Назад"

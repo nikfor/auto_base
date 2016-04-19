@@ -1,0 +1,30 @@
+<%= simple_form_for @car, html: { multipart: true, id: "fileupload", class: "form-car" } do |f| %>
+
+  <div class="form-group text_add">
+    <%= f.input :name, label: t("car.name"), class: "text_field" %>
+    <%= f.input :car_number, label: t("car.car_number"), class: "text_field" %>
+    <%= f.input :car_passport, label: t("car.car_passport_number"), class: "text_field" %>
+    <%= f.input :date_of_issue_passport, label: t("car.date_of_issue_passport"), class: "text_field", as: :date, html5: true %>
+  </div>
+
+  <div class="form-group picture_add">
+    <%= f.fields_for :pictures, @car.pictures do |f_picture| %>
+      <%= f_picture.file_field :image %>
+    <% end %>
+  </div>
+
+  <div class="form-group buttons">
+    <%= f.button :submit, t("car.save") %>
+    <%= link_to t("car.back"), :back, class: "btn btn-default" %>
+  </div>
+
+<% end %>
+
+
+<script type="text/javascript">
+  var i=1
+  $( ".picture_add" ).on("change", "input[type$='file']:last-child", function() {
+    $('<input/>').attr({ type: 'file', id: 'car_pictures_attributes_'+i+'_image', name: 'car[pictures_attributes]['+i+'][image]'}).appendTo('.picture_add');
+    i++;
+  });
+</script>
